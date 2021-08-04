@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <title>UserUpdateの画面です</title>
+  </head>
+  <body class="container">
+    <h1>user更新をする画面です</h1>
+    <div role="main"> 
+      <form method="post" action="/updateUser">
+        <div class="form-group">
+          <input type="hidden" name="id" id="id" class="form-control" value="<%= content.id%>"/>
+        </div>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" class="form-control" value="<%= content.name%>"/>
+        </div>
+        <div class="form-group">
+          <label for="mail">Mail</label>
+          <input type="text" name="mail" id="mail" class="form-control" value="<%= content.mail%>"/>
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" name="age" id="age" class="form-control" value="<%= content.age%>"/>
+        </div>
+        <input type="submit" value="更新する" class="btn btn-primary"></input>
+      </form>
+    </div>
+  </body>
+</html>
